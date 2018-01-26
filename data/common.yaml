@@ -1,0 +1,3 @@
+---
+message: "This node is using common data"
+puppet_enterprise::profile::master::jruby_max_active_instances: 9

@@ -1,0 +1,25 @@
+#######################################################################
+# This file is managed by Puppet Enterprise during install and upgrade.
+# Do not modify.
+---
+:backends:
+  - yaml
+:hierarchy:
+  - nodes/%{::trusted.certname}
+  - common
+:yaml:
+  # datadir is empty here, so hiera uses its defaults:
+  # - /etc/puppetlabs/code/environments/%{environment}/hieradata on *nix
+  # - %CommonAppData%\PuppetLabs\code\environments\%{environment}\hieradata on Windows
+  # When specifying a datadir, make sure the directory exists.
+  :datadir:
+# version: 5
+# hierarchy:
+#   - name: "Per node"
+#     path: "nodes/%{::trusted.certname}.yaml"
+#   - name: "Other"
+#     paths:
+#       - "common.yaml"
+# defaults:
+#   data_hash: yaml_data
+#   datadir: "/etc/puppetlabs/code/environments/%{environment}/hieradata"
